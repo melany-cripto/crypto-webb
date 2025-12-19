@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Web de Cifrados Clásicos</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+<h1>🔐 Cifrados Clásicos</h1>
+<p>Aplicación web para cifrar y descifrar texto</p>
+
+
+<label>Algoritmo:</label>
+<select id="algoritmo">
+<option value="cesar">Cifrado César</option>
+<option value="vigenere">Cifrado Vigenère</option>
+<option value="transposicion">Transposición Columnar</option>
+<option value="atbash">Atbash</option>
+</select>
+
+
+<label>Texto:</label>
+<textarea id="texto" rows="4"></textarea>
+
+
+<label>Clave / Parámetro:</label>
+<input type="text" id="clave" placeholder="Ej: 3, CLAVE, etc" />
+
+
+<div class="buttons">
+<button onclick="cifrar()">🔐 Cifrar</button>
+<button onclick="descifrar()">🔓 Descifrar</button>
+</div>
+
+
+<label>Resultado:</label>
+<textarea id="resultado" rows="4" readonly></textarea>
+</div>
+
+
+<script src="crypto.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
